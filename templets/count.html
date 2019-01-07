@@ -1,0 +1,14 @@
+<h1>This is Count page</h1><br>
+
+<a href="{% url 'home' %}">Back to Home page: </a>
+<h2>Our Word</h2>
+{{fulltext}}
+<h2>Word Length</h2>
+{{list_length}}
+<br>
+<!--{{word_dictionary}}-->
+
+{% for word, value in word_dictionary %}
+{{word}} = {{value}}
+<br>
+{% endfor %}
